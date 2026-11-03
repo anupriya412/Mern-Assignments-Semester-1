@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Aarav Sharma's personal portfolio website">
+    <meta name="author" content="Aarav Sharma">
+
+    <title>Personal Portfolio (v1)</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+          .profile {
+           width: 150px;
+           height: 150px;
+           border: 3px solid #08747a;
+           border-radius: 50%;
+           object-fit: cover;
+           display: block;
+           margin-bottom: 15px;
+}
+        body {
+            margin: 0;
+            padding: 25px 4%;
+            background-color: #eaf1f5;
+            font-family: Arial, sans-serif;
+            color: #111;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .heading {
+            color: #08747a;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            color: #19384d;
+            font-size: 30px;
+            margin: 0;
+        }
+
+        .subtitle {
+            color: #60778a;
+            margin-top: 5px;
+            margin-bottom: 18px;
+        }
+
+        .browser {
+            background-color: white;
+            border: 1px solid #cbd9e1;
+            border-radius: 9px;
+            overflow: hidden;
+            min-height: 1250px;
+        }
+
+        .browser-bar {
+            background-color: #dce6ec;
+            padding: 5px 12px;
+            color: #526b7b;
+            font-size: 12px;
+        }
+
+        .dots {
+            font-size: 17px;
+            margin-right: 10px;
+            letter-spacing: 2px;
+        }
+
+        .content {
+            padding: 10px 20px 40px;
+        }
+
+        nav {
+            margin-bottom: 18px;
+        }
+
+        nav a {
+            color: blue;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-size: 21px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        p {
+            margin-top: 5px;
+            margin-bottom: 8px;
+        }
+
+        ul, ol {
+            padding-left: 14px;
+            margin-top: 5px;
+        }
+
+        dl {
+            margin-top: 20px;
+        }
+
+        dt {
+            margin-top: 5px;
+        }
+
+        dd {
+            margin-left: 24px;
+        }
+
+        .project-image {
+            width: 162px;
+            height: 90px;
+            float: right;
+            margin-right: 60px;
+            margin-top: -5px;
+        }
+
+        footer {
+            margin-top: 28px;
+            font-size: 14px;
+        }
+
+        .note {
+            background-color: #dfedf1;
+            border: 1px solid #cbd9e1;
+            border-radius: 9px;
+            padding: 12px;
+            margin-top: 30px;
+            color: #29495d;
+            font-size: 14px;
+        }
+
+        .bottom-text {
+            color: #60778a;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            .browser {
+                min-height: auto;
+            }
+
+            .project-image {
+                float: none;
+                display: block;
+                margin: 15px 0;
+            }
+
+            .content {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="heading">
+        BTECH YEAR 1 &nbsp;/&nbsp; HTML & CSS &nbsp;/&nbsp; ASSIGNMENT 02
+    </div>
+
+    <h1>Personal Portfolio (v1)</h1>
+
+    <p class="subtitle">
+        Weeks 1-3 · Plain HTML structure · Illustrative expected output
+    </p>
+
+    <div class="browser">
+
+        <div class="browser-bar">
+            <span class="dots">● ● ●</span>
+            02-portfolio/index.html
+        </div>
+
+        <div class="content">
+
+            <!-- Navigation -->
+            <nav>
+                <a href="#home">Home</a> |
+                <a href="#about">About</a> |
+                <a href="#skills">Skills</a> |
+                <a href="#projects">Projects</a> |
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <main>
+
+                <!-- Home -->
+                <header id="home">
+                    <h1 style="color:black; font-size:25px;">
+                        Anupriya Shakya
+                    </h1>
+
+                    <p>
+                        BTech student · Learning to build for the web
+                    </p>
+                </header>
+
+                <!-- About -->
+                <section id="about">
+
+                    <h2>About Me</h2>
+
+                   <img
+                       class="profile"
+                       src="../../src/assets/profile.jpeg"
+                       alt="Anupriya Shakya Profile Photo">
+                    <p>
+                        I am a first-year BTech student.
+                        I enjoy learning HTML and solving problems.
+                    </p>
+
+                </section>
+
+                <!-- Skills -->
+                <section id="skills">
+
+                    <h2>Skills</h2>
+
+                    <ul>
+                        <li>HTML fundamentals</li>
+                        <li>Git and GitHub</li>
+                        <li>Problem solving</li>
+                    </ul>
+
+                </section>
+
+                <!-- Education -->
+                <section id="education">
+
+                    <h2>Education</h2>
+
+                    <ul>
+                        <li>BTech, Computer Science · 2026-2030</li>
+                        <li>Class XII · 2026</li>
+                        <li>Class X . 2024</li>
+                    </ul>
+
+                </section>
+
+                <!-- College -->
+                <section id="college">
+
+                    <h2>My College / My Course</h2>
+
+                    <ul>
+                        <li>Web Development Club</li>
+                        <li>Library and coding lab</li>
+                    </ul>
+
+                    <p>My learning sequence</p>
+
+                    <ol>
+                        <li>HTML structure</li>
+                        <li>CSS styling</li>
+                        <li>Responsive layouts</li>
+                    </ol>
+
+                    <dl>
+                        <dt>HTML</dt>
+                        <dd>Structures the content of a web page.</dd>
+
+                        <dt>CSS</dt>
+                        <dd>Controls how a web page looks.</dd>
+                    </dl>
+
+                </section>
+
+                <!-- Projects -->
+                <section id="projects">
+
+                    <h2>Projects</h2>
+
+                    <img
+                        class="project-image"
+                        src="../../src/assets/project1.jpg"
+                        alt="Project 1 Screenshot">
+
+                    <p>My First Web Page</p>
+
+                    <p>
+                        A simple page built with headings,
+                        paragraphs and links.
+                    </p>
+
+                </section>
+
+                <!-- Contact -->
+                <section id="contact">
+
+                    <h2>Contact</h2>
+
+                    <p>Email: manushakya864@gmail.com</p>
+                    <p>GitHub: github.com/anupriya412</p>
+
+                </section>
+
+            </main>
+
+            <!-- Footer -->
+            <footer>
+                <p>© 2026 Anupriya Shakya</p>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- Assignment Note -->
+    <div class="note">
+        Keep this version plain. Use semantic sections, one h1,
+        working anchor links, ul/ol/dl lists, two images with alt
+        text and the required meta tags.
+    </div>
+
+    <p class="bottom-text">
+        Sample content and design. Follow ASSIGNMENTS.md for code,
+        Git and README requirements.
+    </p>
+
+</body>
+</html>
