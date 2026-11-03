@@ -1,0 +1,462 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Campus Tech Club Registration Form">
+    <meta name="author" content="Your Name">
+
+    <title>Campus Tech Club Registration</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            font-family: Arial, sans-serif;
+            background: #edf0f8;
+            color: #29304a;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .heading p {
+            color: #7555a6;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-size: 30px;
+            color: #34234e;
+            margin-bottom: 8px;
+        }
+
+        .heading span {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #34234e;
+            margin-top: 0;
+        }
+
+        .intro {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        fieldset {
+            border: 1px solid #ded6eb;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 22px;
+        }
+
+        legend {
+            color: #7555a6;
+            font-weight: bold;
+            padding: 0 8px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 7px;
+            font-weight: 500;
+        }
+
+        input:not([type="radio"]):not([type="checkbox"]):not([type="color"]):not([type="range"]),
+        select,
+        textarea {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #ccc4dc;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: Arial;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #7555a6;
+            box-shadow: 0 0 4px #c5b4df;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            accent-color: #7555a6;
+        }
+
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .options label {
+            display: inline;
+            font-weight: normal;
+            margin-left: 4px;
+        }
+
+        .options div {
+            font-size: 14px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            accent-color: #7555a6;
+        }
+
+        input[type="color"] {
+            width: 65px;
+            height: 38px;
+            cursor: pointer;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 12px 22px;
+            border: none;
+            border-radius: 6px;
+            background: #7555a6;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background: #54377e;
+        }
+
+        button[type="reset"] {
+            background: #e8e3f0;
+            color: #34234e;
+        }
+
+        footer {
+            text-align: center;
+            color: #888;
+            font-size: 12px;
+            margin-top: 25px;
+        }
+
+        @media(max-width: 500px) {
+            .form-container {
+                padding: 18px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="heading">
+
+        <p>CAMPUS LIFE / HTML & CSS / ASSIGNMENT 03</p>
+
+        <h1>Join Our Tech Community</h1>
+
+        <span>Register yourself and explore new opportunities!</span>
+
+    </div>
+
+    <div class="form-container">
+
+        <h2>Club Registration Form</h2>
+
+        <p class="intro">
+            Fill in your details below to become a member of our
+            Campus Tech Club. Fields marked * are compulsory.
+        </p>
+
+        <form action="#" method="post">
+
+            <!-- Personal Information -->
+
+            <fieldset>
+
+                <legend>01. Personal Information</legend>
+
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name"
+                        placeholder="Enter your name"
+                        minlength="3" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email"
+                        placeholder="example@gmail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Create Password *</label>
+                    <input type="password" id="password"
+                        name="password"
+                        placeholder="Minimum 8 characters"
+                        minlength="8" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Mobile Number *</label>
+                    <input type="tel" id="phone" name="phone"
+                        placeholder="10 digit mobile number"
+                        pattern="[0-9]{10}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="website">Personal Website</label>
+                    <input type="url" id="website" name="website"
+                        placeholder="https://yourwebsite.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Your Age *</label>
+                    <input type="number" id="age" name="age"
+                        min="16" max="35"
+                        placeholder="Enter your age" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender</label>
+
+                    <div class="options">
+                        <div>
+                            <input type="radio" id="male"
+                                name="gender" value="Male">
+                            <label for="male">Male</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="female"
+                                name="gender" value="Female">
+                            <label for="female">Female</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="other"
+                                name="gender" value="Other">
+                            <label for="other">Other</label>
+                        </div>
+                    </div>
+                </div>
+
+            </fieldset>
+
+            <!-- Academic Details -->
+
+            <fieldset>
+
+                <legend>02. Academic Details</legend>
+
+                <div class="form-group">
+                    <label for="course">Select Your Course *</label>
+
+                    <select id="course" name="course" required>
+                        <option value="">Choose your course</option>
+                        <option value="BTech">BTech</option>
+                        <option value="BCA">BCA</option>
+                        <option value="BBA">BBA</option>
+                        <option value="BSc">BSc</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="semester">Current Semester *</label>
+
+                    <select id="semester" name="semester" required>
+                        <option value="">Select semester</option>
+                        <option value="1">Semester 1</option>
+                        <option value="2">Semester 2</option>
+                        <option value="3">Semester 3</option>
+                        <option value="4">Semester 4</option>
+                        <option value="5">Semester 5</option>
+                        <option value="6">Semester 6</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="college">College City</label>
+
+                    <input type="text" id="college"
+                        name="college" list="citylist"
+                        placeholder="Enter your college city">
+
+                    <datalist id="citylist">
+                        <option value="Delhi">
+                        <option value="Moradabad">
+                        <option value="Noida">
+                        <option value="Lucknow">
+                        <option value="Meerut">
+                        <option value="Agra">
+                    </datalist>
+                </div>
+
+            </fieldset>
+
+            <!-- Interests -->
+
+            <fieldset>
+
+                <legend>03. Your Interests</legend>
+
+                <div class="form-group">
+
+                    <label>Select your interests</label>
+
+                    <div class="options">
+
+                        <div>
+                            <input type="checkbox" id="coding"
+                                name="interest" value="Coding">
+                            <label for="coding">Coding</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="web"
+                                name="interest" value="Web Development">
+                            <label for="web">Web Development</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="design"
+                                name="interest" value="Designing">
+                            <label for="design">Designing</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="ai"
+                                name="interest" value="AI">
+                            <label for="ai">Artificial Intelligence</label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+            <!-- Additional Details -->
+
+            <fieldset>
+
+                <legend>04. Additional Information</legend>
+
+                <div class="form-group">
+                    <label for="date">Joining Date</label>
+                    <input type="date" id="date" name="date">
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Preferred Meeting Time</label>
+                    <input type="time" id="time" name="time">
+                </div>
+
+                <div class="form-group">
+                    <label for="resume">Upload Your Resume</label>
+                    <input type="file" id="resume" name="resume"
+                        accept=".pdf,.doc,.docx">
+                </div>
+
+                <div class="form-group">
+
+                    <label for="range">
+                        Your Interest Level:
+                        <span id="level">5</span>/10
+                    </label>
+
+                    <input type="range" id="range" name="level"
+                        min="1" max="10" value="5"
+                        oninput="document.getElementById('level').textContent=this.value">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="color">Choose Your Favourite Colour</label>
+
+                    <input type="color" id="color" name="color"
+                        value="#7555a6">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Why do you want to join our club?
+                    </label>
+
+                    <textarea id="message" name="message"
+                        placeholder="Write a few lines about yourself..."
+                        minlength="10"></textarea>
+
+                </div>
+
+            </fieldset>
+
+            <!-- Form Buttons -->
+
+            <div class="buttons">
+
+                <button type="submit">
+                    Register Now
+                </button>
+
+                <button type="reset">
+                    Clear Form
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <footer>
+        © 2026 Campus Tech Club | Created with HTML & CSS
+    </footer>
+
+</body>
+</html>
