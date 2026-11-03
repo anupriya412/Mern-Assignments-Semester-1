@@ -1,0 +1,552 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Student Weekly Study Planner">
+    <meta name="author" content="Your Name">
+
+    <title>Student Weekly Study Planner</title>
+
+    <style>
+
+        /* CSS VARIABLES */
+
+        :root {
+            --primary: #563b82;
+            --secondary: #8062ad;
+            --light: #eee9f7;
+            --white: #ffffff;
+            --text: #342b45;
+            --border: #d5cbe5;
+            --hover: #e1d6f3;
+
+            --spacing: 12px;
+            --font-size: 14px;
+            --radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 4%;
+            background: #f0eef6;
+            font-family: Arial, sans-serif;
+            color: var(--text);
+        }
+
+        .heading {
+            color: #8062ad;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            color: #342b45;
+            font-size: 30px;
+            margin: 0;
+        }
+
+        .subtitle {
+            color: #777087;
+            margin-top: 8px;
+            margin-bottom: 30px;
+        }
+
+        .table-container {
+            background: var(--white);
+            padding: 22px;
+            border-radius: var(--radius);
+            overflow-x: auto;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 21px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            min-width: 950px;
+            border-collapse: collapse;
+            font-size: var(--font-size);
+            text-align: left;
+        }
+
+        caption {
+            caption-side: bottom;
+            padding: 15px;
+            color: #777087;
+            font-size: 13px;
+        }
+
+        thead {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        th {
+            padding: var(--spacing);
+            border: 1px solid #cfc3e1;
+        }
+
+        td {
+            padding: var(--spacing);
+            border: 1px solid var(--border);
+        }
+
+        tbody tr:nth-child(even) {
+            background: var(--light);
+        }
+
+        tbody tr:hover {
+            background: var(--hover);
+            transition: 0.2s;
+        }
+
+        .day {
+            background: #e1d8ef;
+            color: var(--primary);
+            font-weight: bold;
+            text-align: center;
+        }
+
+        tfoot {
+            background: var(--primary);
+            color: white;
+            font-weight: bold;
+        }
+
+        tfoot td {
+            padding: 15px;
+            border: 1px solid var(--primary);
+        }
+
+        .note {
+            background: #e4dcef;
+            padding: 15px;
+            margin-top: 25px;
+            border-radius: var(--radius);
+            color: #48375f;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        footer {
+            color: #777087;
+            font-size: 12px;
+            margin-top: 15px;
+        }
+
+        @media(max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            .table-container {
+                padding: 12px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- PAGE HEADING -->
+
+    <div class="heading">
+        BTECH YEAR 1 / HTML & CSS / ASSIGNMENT 04
+    </div>
+
+    <h1>The Smart Study Planner</h1>
+
+    <p class="subtitle">
+        Week 4 · HTML Tables · 20 Study Sessions × 10 Columns
+    </p>
+
+
+    <!-- TABLE SECTION -->
+
+    <div class="table-container">
+
+        <h2>My Weekly Learning Schedule</h2>
+
+        <table>
+
+            <caption>
+                Table 1: Weekly study activities and progress report
+            </caption>
+
+            <!-- TABLE HEADER -->
+
+            <thead>
+
+                <tr>
+                    <th rowspan="2" scope="col">Day</th>
+
+                    <th colspan="4" scope="colgroup">
+                        Study Schedule
+                    </th>
+
+                    <th colspan="2" scope="colgroup">
+                        Study Details
+                    </th>
+
+                    <th colspan="3" scope="colgroup">
+                        Performance
+                    </th>
+                </tr>
+
+                <tr>
+                    <th scope="col">Time</th>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Topic</th>
+                    <th scope="col">Duration</th>
+                    <th scope="col">Study Mode</th>
+                    <th scope="col">Priority</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Resource</th>
+                    <th scope="col">Score</th>
+                </tr>
+
+            </thead>
+
+
+            <!-- TABLE BODY -->
+
+            <tbody>
+
+                <!-- MONDAY -->
+
+                <tr>
+                    <th rowspan="4" scope="rowgroup" class="day">
+                        Monday
+                    </th>
+                    <td>8:00 AM</td>
+                    <td>HTML</td>
+                    <td>Introduction</td>
+                    <td>1 Hour</td>
+                    <td>Online</td>
+                    <td>High</td>
+                    <td>Done</td>
+                    <td>Notes</td>
+                    <td>90%</td>
+                </tr>
+
+                <tr>
+                    <td>10:00 AM</td>
+                    <td>CSS</td>
+                    <td>Selectors</td>
+                    <td>1 Hour</td>
+                    <td>Practice</td>
+                    <td>High</td>
+                    <td>Done</td>
+                    <td>Book</td>
+                    <td>85%</td>
+                </tr>
+
+                <tr>
+                    <td>2:00 PM</td>
+                    <td>English</td>
+                    <td>Grammar</td>
+                    <td>45 Min</td>
+                    <td>Reading</td>
+                    <td>Medium</td>
+                    <td>Done</td>
+                    <td>Notes</td>
+                    <td>80%</td>
+                </tr>
+
+                <tr>
+                    <td>5:00 PM</td>
+                    <td>Maths</td>
+                    <td>Algebra</td>
+                    <td>1 Hour</td>
+                    <td>Practice</td>
+                    <td>High</td>
+                    <td>Pending</td>
+                    <td>Book</td>
+                    <td>75%</td>
+                </tr>
+
+
+                <!-- TUESDAY -->
+
+                <tr>
+                    <th rowspan="4" scope="rowgroup" class="day">
+                        Tuesday
+                    </th>
+                    <td>8:00 AM</td>
+                    <td>HTML</td>
+                    <td>Forms</td>
+                    <td>1 Hour</td>
+                    <td>Practice</td>
+                    <td>High</td>
+                    <td>Done</td>
+                    <td>PC</td>
+                    <td>95%</td>
+                </tr>
+
+                <tr>
+                    <td>10:00 AM</td>
+                    <td>CSS</td>
+                    <td>Colors</td>
+                    <td>1 Hour</td>
+                    <td>Online</td>
+                    <td>Medium</td>
+                    <td>Done</td>
+                    <td>Video</td>
+                    <td>88%</td>
+                </tr>
+
+                <tr>
+                    <td>2:00 PM</td>
+                    <td>Science</td>
+                    <td>Basics</td>
+                    <td>45 Min</td>
+                    <td>Reading</td>
+                    <td>Low</td>
+                    <td>Done</td>
+                    <td>Book</td>
+                    <td>78%</td>
+                </tr>
+
+                <tr>
+                    <td>5:00 PM</td>
+                    <td>Maths</td>
+                    <td>Geometry</td>
+                    <td>1 Hour</td>
+                    <td>Practice</td>
+                    <td>High</td>
+                    <td>Pending</td>
+                    <td>Notes</td>
+                    <td>82%</td>
+                </tr>
+
+
+                <!-- WEDNESDAY -->
+
+                <tr>
+                    <th rowspan="4" scope="rowgroup" class="day">
+                        Wednesday
+                    </th>
+                    <td>8:00 AM</td>
+                    <td>HTML</td>
+                    <td>Tables</td>
+                    <td>1 Hour</td>
+                    <td>Practice</td>
+                    <td>High</td>
+                    <td>Done</td>
+                    <td>PC</td>
+                    <td>92%</td>
+                </tr>
+
+                <tr>
+                    <td>10:00 AM</td>
+                    <td>CSS</td>
+                    <td>Box Model</td>
+                    <td>1 Hour</td>
+                    <td>Online</td>
+                    <td>High</td>
+                    <td>Done</td>
+                    <td>Video</td>
+                    <td>86%</td>
+                </tr>
+
+                <tr>
+                    <td>2:00 PM</td>
+                    <td>English</td>
+                    <td>Writing</td>
+                    <td>45 Min</td>
+                    <td>Reading</td>
+                    <td>Medium</td>
+                    <td>Done</td>
+                    <td>Notes</td>
+                    <td>84%</td>
+                </tr>
+
+                <tr>
+                    <td>5:00 PM</td>
+                    <td>Computer</td>
+                    <td>Basics</td>
+                    <td>1 Hour</td>
+                    <td>Practice</td>
+                    <td>High</td>
+                    <td>Pending</td>
+                    <td>Book</td>
+                    <td>79%</td>
+                </tr>
+
+
+                <!-- THURSDAY -->
+
+                <tr>
+                    <th rowspan="4" scope="rowgroup" class="day">
+                        Thursday
+                    </th>
+                    <td>8:00 AM</td>
+                    <td>HTML</td>
+                    <td>Semantic Tags</td>
+                    <td>1 Hour</td>
+                    <td>Online</td>
+                    <td>High</td>
+                    <td>Done</td>
+                    <td>Notes</td>
+                    <td>96%</td>
+                </tr>
+
+                <tr>
+                    <td>10:00 AM</td>
+                    <td>CSS</td>
+                    <td>Flexbox</td>
+                    <td>1 Hour</td>
+                    <td>Practice</td>
+                    <td>High</td>
+                    <td>Done</td>
+                    <td>PC</td>
+                    <td>90%</td>
+                </tr>
+
+                <tr>
+                    <td>2:00 PM</td>
+                    <td>Maths</td>
+                    <td>Calculus</td>
+                    <td>45 Min</td>
+                    <td>Practice</td>
+                    <td>Medium</td>
+                    <td>Done</td>
+                    <td>Book</td>
+                    <td>83%</td>
+                </tr>
+
+                <tr>
+                    <td>5:00 PM</td>
+                    <td>English</td>
+                    <td>Speaking</td>
+                    <td>1 Hour</td>
+                    <td>Online</td>
+                    <td>Low</td>
+                    <td>Pending</td>
+                    <td>Video</td>
+                    <td>77%</td>
+                </tr>
+
+
+                <!-- FRIDAY -->
+
+                <tr>
+                    <th rowspan="4" scope="rowgroup" class="day">
+                        Friday
+                    </th>
+                    <td>8:00 AM</td>
+                    <td>HTML</td>
+                    <td>Revision</td>
+                    <td>1 Hour</td>
+                    <td>Practice</td>
+                    <td>High</td>
+                    <td>Done</td>
+                    <td>Notes</td>
+                    <td>98%</td>
+                </tr>
+
+                <tr>
+                    <td>10:00 AM</td>
+                    <td>CSS</td>
+                    <td>Grid Layout</td>
+                    <td>1 Hour</td>
+                    <td>Practice</td>
+                    <td>High</td>
+                    <td>Done</td>
+                    <td>PC</td>
+                    <td>91%</td>
+                </tr>
+
+                <tr>
+                    <td>2:00 PM</td>
+                    <td>Computer</td>
+                    <td>Internet</td>
+                    <td>45 Min</td>
+                    <td>Reading</td>
+                    <td>Medium</td>
+                    <td>Done</td>
+                    <td>Book</td>
+                    <td>87%</td>
+                </tr>
+
+                <tr>
+                    <td>5:00 PM</td>
+                    <td>Revision</td>
+                    <td>Weekly Test</td>
+                    <td>1 Hour</td>
+                    <td>Practice</td>
+                    <td>High</td>
+                    <td>Done</td>
+                    <td>Quiz</td>
+                    <td>94%</td>
+                </tr>
+
+            </tbody>
+
+
+            <!-- TABLE FOOTER -->
+
+            <tfoot>
+
+                <tr>
+                    <td colspan="7">
+                        Weekly Study Summary
+                    </td>
+
+                    <td colspan="2">
+                        17 / 20 Completed
+                    </td>
+
+                    <td>87%</td>
+                </tr>
+
+            </tfoot>
+
+        </table>
+
+    </div>
+
+
+    <!-- INFORMATION NOTE -->
+
+    <div class="note">
+
+        <strong>About this table:</strong>
+
+        This weekly planner helps students organize their
+        study schedule, manage learning activities and
+        track their academic progress.
+
+        It uses colspan, rowspan, table headings,
+        CSS variables, striped rows and hover effects.
+
+    </div>
+
+
+    <footer>
+        Sample academic data · HTML & CSS Assignment 04
+        <br>
+        Created for learning HTML table structure.
+    </footer>
+
+</body>
+</html>
