@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="calculator.css">
+  <title>Calculator</title>
+  <script>
+    function pick(value) {
+      const input = document.getElementById('a');
+      input.value += value;
+    }
+
+    function solve() {
+      const input = document.getElementById('a');
+      try {
+        input.value = eval(input.value);
+      } catch {
+        input.value = 'Error';
+      }
+    }
+
+    function clearInput() {
+      const input = document.getElementById('a');
+      input.value = '';
+    }
+    function backspace() {
+      const input = document.getElementById('a');
+      input.value = input.value.slice(0, -1);
+    }
+  </script>
+</head>
+<body>
+  <table>
+    <tr>
+      <th colspan="2"><input type="text" id="a" readonly></th>
+      <th colspan="1"><input type="button" value="Backspace" onclick="backspace()"></th>
+      <th><input type="button" value="C" onclick="clearInput()"></th>
+    </tr>
+    <tr>
+      <th><input type="button" value="1" onclick="pick(1)"></th>
+      <th><input type="button" value="2" onclick="pick(2)"></th>
+      <th><input type="button" value="3" onclick="pick(3)"></th>
+      <th><input type="button" value="/" onclick="pick('/')"></th>
+    </tr>
+    <tr>
+      <th><input type="button" value="4" onclick="pick(4)"></th>
+      <th><input type="button" value="5" onclick="pick(5)"></th>
+      <th><input type="button" value="6" onclick="pick(6)"></th>
+      <th><input type="button" value="*" onclick="pick('*')"></th>
+    </tr>
+    <tr>
+      <th><input type="button" value="7" onclick="pick(7)"></th>
+      <th><input type="button" value="8" onclick="pick(8)"></th>
+      <th><input type="button" value="9" onclick="pick(9)"></th>
+      <th><input type="button" value="-" onclick="pick('-')"></th>
+    </tr>
+    <tr>
+      <th><input type="button" value="0" onclick="pick(0)"></th>
+      <th><input type="button" value="." onclick="pick('.')"></th>
+      <th><input type="button" value="=" onclick="solve()"></th>
+      <th><input type="button" value="+" onclick="pick('+')"></th>
+    </tr>
+  </table>
+</body>
+</html>
